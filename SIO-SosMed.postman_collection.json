@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "0f97ddd3-9d52-417e-9261-c13127a1b42a",
+		"name": "SIO-SosMed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28128671"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "userdua@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "userdua123",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "081234567890",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "userdua",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "dua",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2023-12-15",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Photo/Other/image_25715e0f-c416-45a8-973c-ea8d0e99547c20230203_145613.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{base_url}}/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "superadmin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "superadmin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "081234567890",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "usersatu",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "hana",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2023-12-15",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Photo/Other/image_25715e0f-c416-45a8-973c-ea8d0e99547c20230203_145613.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{base_url}}/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Search User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/search"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Follow/Unfollow",
+			"item": [
+				{
+					"name": "Follow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/profile/1/follow"
+					},
+					"response": []
+				},
+				{
+					"name": "Following",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/profile/following"
+					},
+					"response": []
+				},
+				{
+					"name": "Follower",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/profile/follower"
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/profile/1/unfollow"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "New Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2FlOWExNzY4Y2UzNTZkZDFiOGMwMjllZjJlMTc0ODgxN2ZiZWI4ZWIxOWEwOGMxZDgxZDdlMDcwOGEwNDc3ODNiZWQzM2Q4NzNkMGM5NmQiLCJpYXQiOjE3MDI3MTk5NzQuNzQwOTUyLCJuYmYiOjE3MDI3MTk5NzQuNzQwOTYzLCJleHAiOjE3MzQzNDIzNzMuNDEzMTY3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.O9rh8EepzK5odg7dRx_DoK708CVp9O2BwLYZGEgrDjQmitXOi2yKKVb5tvM9qiZFHaFSgM5wPaJbd7hajv2q33fFHKLxxO9_4Ih8HK5JAtmpRCfhZtEsn-MHxlKI29E7Cvio5LjYGvCFan_3PXKA2tLYitj25TFj8GPdN0AOz2tGhAmU17Zi_vRB301mO7e7X5xwcgGvu0SdTSx5hciDd5LIctQBVl5QpyLds65XNl5TAXBoYk4KfqCDtLYLi6c5gz3l6y6spl-KbeIKKggu86Ltknkfgm49kHDVsBFaH2WYGtfTA2CjIHY2MUfQW9GZrE_ibrGj5HMjzPpxECQMajxxpvHhjU96Q3ub_D0lWDEB9HzegEgkI5Kwh1IWBZ6DdmLeTNmHe4eN9eQWAOYD7W1zfObQiKK-GeRvd9TbrYIerG5sTq9I-2ZvKBlLOaLWSKv0UPdCKJL6cLAgvWeGaP0vNOgJGqyZ8vks5JQGJgBjZe4S2bIq7aM3z2XTCnLrvYOiuSZXrf4PHWDIvHxs_3C9irmjv4V3LRw4eYZ-GkM4uJq-QpWPRDWlMHdZXITwuv-lYDwytSR7AWfw66pDutTkZMBlqFq3rQQP80MyAq0phpEv1Gy3owpVJWPT3jI1Z_RLrpHNgbgpswkPiPoCjzLQjckYytTRYWmzABz-F6I"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "New Post Image",
+									"type": "text"
+								},
+								{
+									"key": "images[0]",
+									"type": "file",
+									"src": "/E:/Photo/Other/IMG_20191217_160135.jpg"
+								},
+								{
+									"key": "images[1]",
+									"type": "file",
+									"src": "/E:/Photo/Other/IMG_20191217_160130.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{base_url}}/post/new"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/post/dashboard"
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/post/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Like/Dislike Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2FlOWExNzY4Y2UzNTZkZDFiOGMwMjllZjJlMTc0ODgxN2ZiZWI4ZWIxOWEwOGMxZDgxZDdlMDcwOGEwNDc3ODNiZWQzM2Q4NzNkMGM5NmQiLCJpYXQiOjE3MDI3MTk5NzQuNzQwOTUyLCJuYmYiOjE3MDI3MTk5NzQuNzQwOTYzLCJleHAiOjE3MzQzNDIzNzMuNDEzMTY3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.O9rh8EepzK5odg7dRx_DoK708CVp9O2BwLYZGEgrDjQmitXOi2yKKVb5tvM9qiZFHaFSgM5wPaJbd7hajv2q33fFHKLxxO9_4Ih8HK5JAtmpRCfhZtEsn-MHxlKI29E7Cvio5LjYGvCFan_3PXKA2tLYitj25TFj8GPdN0AOz2tGhAmU17Zi_vRB301mO7e7X5xwcgGvu0SdTSx5hciDd5LIctQBVl5QpyLds65XNl5TAXBoYk4KfqCDtLYLi6c5gz3l6y6spl-KbeIKKggu86Ltknkfgm49kHDVsBFaH2WYGtfTA2CjIHY2MUfQW9GZrE_ibrGj5HMjzPpxECQMajxxpvHhjU96Q3ub_D0lWDEB9HzegEgkI5Kwh1IWBZ6DdmLeTNmHe4eN9eQWAOYD7W1zfObQiKK-GeRvd9TbrYIerG5sTq9I-2ZvKBlLOaLWSKv0UPdCKJL6cLAgvWeGaP0vNOgJGqyZ8vks5JQGJgBjZe4S2bIq7aM3z2XTCnLrvYOiuSZXrf4PHWDIvHxs_3C9irmjv4V3LRw4eYZ-GkM4uJq-QpWPRDWlMHdZXITwuv-lYDwytSR7AWfw66pDutTkZMBlqFq3rQQP80MyAq0phpEv1Gy3owpVJWPT3jI1Z_RLrpHNgbgpswkPiPoCjzLQjckYytTRYWmzABz-F6I"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/post/1/like"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/post/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Comment",
+			"item": [
+				{
+					"name": "New Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "newest comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/post/2/comment"
+					},
+					"response": []
+				},
+				{
+					"name": "New Comment Reply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "new reply",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/post/2/comment/reply/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "new comment change",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/post/2/comment/1/edit"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Reply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "new reply change",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/post/2/comment/1/edit"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQ2NDA5OGNiOGNjNDQ3ZTEwYTViMDAwYTU4ZmVjYzBkZmZlZmQ1YjNjMGM2ZjM4MzBjOWI4YWVkZTJkMjJkNDg5NmRlZGFhNzFhZDhmMjkiLCJpYXQiOjE3MDI3MDc4MjguNTIxMTksIm5iZiI6MTcwMjcwNzgyOC41MjExOTksImV4cCI6MTczNDMzMDIyNy4yNzg1MjMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UT01MaomQtuqY0n_isDOevKZ7bZOlDBTTd2EGQIuSZ3BeaOJr3ZTcGo7bEutlun7evYrGDjeE7wm8ktOyWO3ZpOalJAQFLrgm-7AB4l0N3UWwiTTRu8CuBlRCw1gDsFoE4MIziKkIx3iBPAMueHFhAEKD9P54U571ZjRvvEm6CpIPW_JBq6ELH6P59hPACE5LIIWRv-BFcHRQIhHGkpdF0FdwuqLssiVYSpFim8t81uT9JLxwTYflvDn0JIDqVtj14RwwWbe11-ygUrVqWYIu-Y9qMIgcnvcFPMY4R7QORXqPtKF_u0Js9Ruj_6iGcY6128njrMydH4uIp2lDXt0E1yGiax3deqw-F36LLBbBRQrPPPrnTvIXU7R2s1qiT_tjhOzb0-CyQEysrGHvqZVD6R1Qcu8GXaaPd83IH7rRQJE9DIlV_Oj0fJcw_WFDUb3bGj5G6RZiLnm0xw6kBgqFp8rCgnQhRe1bhl53k3UfS1cSDPrpkS23R6UyOeDVIyJlRGaQOZ8Uh3uKLmhm7Th0IZuiIY8yaOT1fKJCcvQORQLvH8mu-W0OpyJYLePgZBJj5UXQUjPkjSPVYo82EO3lRil9uXd7pS4lC5ZIaGfLY-gj_N1cufQ-Gjjt2tMwflc0Bt2TqqCEIG0wPK24tH4u6Jk5FDmHnTbbHLWurHt-IM"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/post/2/comment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/post/2/comment/1"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
